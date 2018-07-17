@@ -1,0 +1,23 @@
+html {
+  font-size: 16px;
+}
+body {
+  background-image: url(../images/bakgrund4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  height: 5rem;
+}
+
+h1 {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 3px;
+}
