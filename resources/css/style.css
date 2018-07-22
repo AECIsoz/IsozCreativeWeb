@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  box-sizing: border-box;
 }
 body {
   background-image: url(../images/bakgrund4.jpg);
@@ -7,17 +8,90 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+/* header section with company name coming into focus on hover */
+
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 90%;
-  height: 5rem;
+  height: 8rem;
 }
 
 h1 {
-  font-family: "Bungee", cursive;
-  font-size: 3rem;
   color: white;
   letter-spacing: 3px;
+  font-family: "Sources Code Pro", monospace;
+  text-transform: uppercase;
+}
+
+.title {
+  display: inline-flex;
+  font-size: 6rem;
+  max-width: 90%;
+  opacity: 0.4;
+  padding-top: 3rem;
+  animation-name: top;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top {
+  from {opacity: 0.4}
+  to {opacity:0.8;}
+}
+
+/* main body of landing page */
+
+.main-container {
+  display: flex;
+  margin: 4rem 2rem;
+}
+
+.presentation {
+  display: flex;
+}
+
+.info-boxes {
+  display: flex;
+  align-items: flex-start;
+  max-width: 50%;
+}
+
+.info-boxes img {
+  width: 50%;
+  border: 3px solid white;
+  transition: all 2s ease-in-out;
+}
+
+.info-boxes::after img::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.info-boxes img:hover {
+  transform: scale(1.1);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  border-right: 2px solid darkgrey;
+}
+.section-title {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.description p {
+  line-height: 1.2;
+  padding-top: 1rem;
 }
